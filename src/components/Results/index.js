@@ -1,0 +1,48 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
+import Search from "../Search";
+
+import Navbar from "../Navbar";
+import Card from "../Card";
+import styles from "./results.module.scss";
+
+const Results = () => {
+  let { search } = useLocation();
+  const heroUrl = search.slice(search.indexOf("=") + 1);
+  const [error, setError] = useState("");
+  const [hero, setHero] = useState("");
+  const api = `http://localhost:8080/search/?hero=${heroUrl}`;
+
+  useEffect(() => {
+    const fetchHeroes = async () => {
+      let response = await axios.get(api);
+      response.data.response === "success"
+        ? setHero(response.data.results)
+        : setError(response.data.error);
+    };
+    fetchHeroes();
+  }, [hero]);
+
+  return (
+    <>
+      <Navbar />
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <Search />
+        </div>
+        <div className={styles.cardDeck}>
+          {hero ? (
+            hero.map((h, i) => {
+              return <Card hero={h} key={i} />;
+            })
+          ) : (
+            <p>{error}</p>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Results;

@@ -1,0 +1,107 @@
+.containerCard {
+  -webkit-perspective: 900;
+  -moz-perspective: 900;
+  -o-perspective: 900;
+  perspective: 900;
+  position: relative;
+  display: block;
+  width: 30%;
+  margin-top: 20px;
+  margin-right: 5px;
+  .card {
+    width: 150px;
+    height: 200px;
+
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    .front,
+    .back {
+      background-color: hsl(207, 26%, 17%);
+      border-radius: 4px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: -webkit-transform 310ms;
+      transition: -webkit-transform 310ms;
+      transition: transform 310ms;
+      transition: transform 310ms, -webkit-transform 310ms;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transform-origin: center top;
+      transform-origin: center top;
+    }
+    .front {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      img {
+        min-width: 100%;
+        min-height: 80%;
+      }
+      .frontName {
+        text-align: center;
+        min-width: 100%;
+      }
+    }
+    .back {
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      text-align: center;
+      padding-top: 8px;
+      h6 {
+        margin-bottom: 7px;
+      }
+      .error {
+        font-weight: 400;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        padding: 2px;
+        margin: 0 3px;
+        background-color: #d9534f;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        button {
+          border: 0.5px solid hsl(209, 23%, 22%);
+          border-radius: 3px;
+          background-color: hsl(209, 23%, 22%);
+          color: white;
+          font-size: 12px;
+          padding: 5px 10px;
+          margin: 7px 3px 0;
+          cursor: pointer;
+          &:hover {
+            transform: scale(0.95);
+          }
+        }
+      }
+      .add {
+        border: 0.5px solid hsl(209, 23%, 22%);
+        border-radius: 3px;
+        background-color: hsl(209, 23%, 22%);
+        color: white;
+        font-size: 12px;
+        padding: 5px 10px;
+        margin: 7px 3px 0;
+      }
+    }
+    &:hover .front {
+      -webkit-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+    }
+    &:hover .back {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+  }
+}
