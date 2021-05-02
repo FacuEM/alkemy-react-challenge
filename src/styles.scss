@@ -5,8 +5,11 @@
   box-sizing: border-box;
 }
 
+$dark-color: #202c37;
+$light-color: #2b3945;
+
 body {
-  background-color: hsl(207, 26%, 17%);
+  background-color: $dark-color;
   color: white;
   font-family: "Nunito Sans", sans-serif;
 }

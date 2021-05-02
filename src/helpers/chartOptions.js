@@ -90,9 +90,9 @@ export const optionsCard = {
   },
   plotOptions: {
     radar: {
-      size: 100,
+      size: 90,
       offsetY: -15,
-      offsetX: -16,
+      offsetX: -27,
     },
   },
 };

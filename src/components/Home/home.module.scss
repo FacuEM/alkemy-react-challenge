@@ -1,5 +1,8 @@
+$dark-color: #202c37;
+$light-color: #2b3945;
+
 .container {
-  background-color: hsl(209, 23%, 22%);
+  background-color: $light-color;
   border-radius: 5px;
   width: 80%;
   margin: 25px auto;
@@ -9,7 +12,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-left: 22px;
+    margin-left: 5px;
   }
   .header {
     display: flex;
@@ -17,12 +20,11 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 10px;
-    margin: 10px 25px;
+    margin: 10px 22px;
     .headerLeft {
       width: 50%;
       hr {
-        width: 75%;
-        text-align: center;
+        width: 93%;
         border: 0;
         height: 0;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -39,7 +41,7 @@
       display: flex;
       width: 60%;
       justify-content: space-between;
-      background-color: hsl(207, 26%, 17%);
+      background-color: $dark-color;
       border-radius: 5px;
 
       padding-top: 5px;
@@ -48,10 +50,10 @@
         margin-top: 15px;
         padding: 0 20px;
         h1 {
-          margin: 5px 0 15px;
+          margin: 5px 0 20px;
         }
         p {
-          margin-left: 30px;
+          margin-left: 3px;
           margin-bottom: 10px;
 
           span {

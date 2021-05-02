@@ -1,5 +1,8 @@
+$dark-color: #202c37;
+$light-color: #2b3945;
+
 .container {
-  background-color: hsl(209, 23%, 22%);
+  background-color: $light-color;
   border-radius: 5px;
   width: 80%;
   margin: 25px auto;
@@ -9,16 +12,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-left: 5px;
   }
   .header {
     display: flex;
     align-items: flex-start;
     margin-bottom: 10px;
     button {
-      margin-left: 20px;
-      border: 0.5px solid hsl(207, 26%, 17%);
+      margin-left: 22px;
+      border: 0.5px solid $dark-color;
       border-radius: 3px;
-      background-color: hsl(207, 26%, 17%);
+      background-color: $dark-color;
       color: white;
       font-size: 25px;
       padding: 5px 10px;

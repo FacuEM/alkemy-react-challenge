@@ -1,7 +1,10 @@
+$dark-color: #202c37;
+$light-color: #2b3945;
+
 .container {
   height: 50px;
   padding: 10px 20px 0;
-  background-color: hsl(207, 26%, 17%);
+  background-color: $dark-color;
   display: flex;
 
   .left,

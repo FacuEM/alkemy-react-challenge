@@ -1,7 +1,6 @@
 .form {
-  width: 50%;
+  width: 70%;
   display: flex;
-  height: 20%;
   background-color: #fff;
   border-radius: 4px;
   margin-top: 15px;
@@ -9,15 +8,16 @@
   .input {
     width: 100%;
     border: 0;
-    height: 36px;
+    height: 46px;
     padding: 0 10px;
     outline: 0;
     order: 2;
+    font-size: 16px;
   }
   .button {
     background-color: #fff;
     border: 1px solid #000;
-    height: 36px;
+    height: 46px;
     padding: 10px;
     margin-left: 5px;
     border: 0;
