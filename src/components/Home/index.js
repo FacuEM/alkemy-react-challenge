@@ -22,8 +22,46 @@ const Home = () => {
       <Navbar />
       <div className={styles.container}>
         <div className={styles.header}>
-          <Search />
-          <div />
+          <div className={styles.headerLeft}>
+            <h1>Say welcome to your team</h1>
+            <hr />
+            <h3>Find new team members!</h3>
+            <Search />
+          </div>
+
+          {team && team.length ? (
+            <div className={styles.stats}>
+              <div className={styles.averages}>
+                <h1>Team stats:</h1>
+                <p>
+                  Strongest Stat:{" "}
+                  <span>
+                    {getStrongestStat(team).charAt(0).toUpperCase() +
+                      getStrongestStat(team).slice(1)}
+                  </span>
+                </p>
+                <p>
+                  Average Height: <span>{`${getAvgHeight(team)} cm`}</span>
+                </p>
+                <p>
+                  Average Weight: <span>{`${getAvgWeight(team)} kg`}</span>
+                </p>
+              </div>
+
+              <Chart
+                options={optionsHome}
+                series={[
+                  {
+                    name: "Score",
+                    data: getPowerStats(team),
+                  },
+                ]}
+                type="radar"
+                width="300"
+                height="250"
+              />
+            </div>
+          ) : null}
         </div>
         <div className={styles.cardDeck}>
           {team && team.length > 0 ? (
@@ -34,39 +72,6 @@ const Home = () => {
             <h1>You don't have a team yet</h1>
           )}
         </div>
-        {team && team.length ? (
-          <div className={styles.stats}>
-            <div className={styles.averages}>
-              <h1>Team stats:</h1>
-              <p>
-                Strongest Stat:{" "}
-                <span>
-                  {getStrongestStat(team).charAt(0).toUpperCase() +
-                    getStrongestStat(team).slice(1)}
-                </span>
-              </p>
-              <p>
-                Average Height: <span>{`${getAvgHeight(team)} cm`}</span>
-              </p>
-              <p>
-                Average Weight: <span>{`${getAvgWeight(team)} kg`}</span>
-              </p>
-            </div>
-
-            <Chart
-              options={optionsHome}
-              series={[
-                {
-                  name: "Score",
-                  data: getPowerStats(team),
-                },
-              ]}
-              type="radar"
-              width="220"
-              height="180"
-            />
-          </div>
-        ) : null}
       </div>
     </>
   );

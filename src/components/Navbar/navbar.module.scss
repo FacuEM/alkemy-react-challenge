@@ -1,6 +1,6 @@
 .container {
-  height: 30px;
-  padding-top: 10px;
+  height: 50px;
+  padding: 10px 20px 0;
   background-color: hsl(207, 26%, 17%);
   display: flex;
 
@@ -16,6 +16,7 @@
 
     i {
       transition: all 0.2s ease-in-out;
+      font-size: 35px;
 
       &:hover {
         transform: translateX(-3px);
@@ -28,7 +29,7 @@
     color: white;
     text-decoration: none;
     .pageTitle {
-      font-size: 20px;
+      font-size: 35px;
       margin-left: 20px;
       transition: all 0.2s ease-in-out;
       &:hover {

@@ -9,7 +9,7 @@ git clone https://github.com/FacuEM/alkemy-react-challenge.git
 ### FRONT
 
 ```bash
-cd challenge-react
+cd alkemy-react-challenge
 npm install
 npm start
 ```
@@ -17,7 +17,7 @@ npm start
 ### BACK
 
 ```bash
-cd challenge-react/backend
+cd alkemy-react-challenge/backend
 npm install
 npm start
 ```

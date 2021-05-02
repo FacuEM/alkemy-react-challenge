@@ -11,7 +11,7 @@ export const optionsHome = {
     labels: {
       show: true,
       style: {
-        fontSize: "9px",
+        fontSize: "12px",
         fontFamily: "Helvetica, Arial, sans-serif",
         fontWeight: 300,
         cssClass: "apexcharts-xaxis-label",
@@ -38,11 +38,12 @@ export const optionsHome = {
     },
   },
   stroke: {
-    width: 1,
+    width: 2.5,
   },
   plotOptions: {
     radar: {
-      size: 65,
+      size: 80,
+      offsetX: -10,
       offsetY: 10,
     },
   },
@@ -61,10 +62,7 @@ export const optionsCard = {
     labels: {
       show: true,
       style: {
-        fontSize: "7px",
-        fontFamily: "Helvetica, Arial, sans-serif",
-        fontWeight: 300,
-        cssClass: "apexcharts-xaxis-label",
+        fontSize: "15px",
         colors: [
           "#ffffff",
           "#ffffff",
@@ -88,13 +86,13 @@ export const optionsCard = {
     },
   },
   stroke: {
-    width: 1,
+    width: 2.5,
   },
   plotOptions: {
     radar: {
-      size: 35,
-      offsetY: 5,
-      offsetX: -3,
+      size: 100,
+      offsetY: -15,
+      offsetX: -16,
     },
   },
 };

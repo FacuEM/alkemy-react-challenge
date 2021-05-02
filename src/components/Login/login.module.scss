@@ -1,9 +1,9 @@
 .container {
-  margin: 50px auto;
+  margin: 65px auto;
   width: 30%;
   border: 1px solid hsl(209, 23%, 22%);
   border-radius: 5px;
-  padding: 10px;
+  padding: 15px;
 
   background-color: hsl(209, 23%, 22%);
 
@@ -12,12 +12,12 @@
     flex-direction: column;
 
     input {
-      margin-bottom: 7px;
+      margin-bottom: 12px;
       border: 0.5px solid hsl(209, 23%, 22%);
       border-radius: 3px;
       width: 100%;
       border: 0;
-      height: 25px;
+      height: 40px;
       padding: 0 10px;
     }
     button {
@@ -25,7 +25,7 @@
       border-radius: 3px;
       background-color: hsl(207, 26%, 17%);
       color: white;
-      font-size: 12px;
+      font-size: 25px;
       width: 100%;
       padding: 5px 10px;
       margin: 7px auto 0;
@@ -38,7 +38,6 @@
     .error {
       font-weight: 400;
       border-radius: 3px;
-      font-size: 12px;
       text-align: center;
       padding: 5px;
       background-color: #d9534f;

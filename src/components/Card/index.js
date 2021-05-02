@@ -67,8 +67,8 @@ const Card = ({ hero }) => {
               },
             ]}
             type="radar"
-            width="150"
-            height="110"
+            width="350"
+            height="310"
           />
           {error ? (
             <div className={styles.error}>{error}</div>
@@ -89,7 +89,6 @@ const Card = ({ hero }) => {
                 </button>
               ) : (
                 <button
-                  className={styles.add}
                   onClick={(e) => {
                     e.preventDefault();
                     onSetNewMember(hero);

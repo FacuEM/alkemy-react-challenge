@@ -10,10 +10,11 @@ const HeroDetails = () => {
   const [hero, setHero] = useState("");
   const [error, setError] = useState("");
   let { id } = useParams();
+  const api = `http://localhost:8080/hero/${id}`;
 
   useEffect(() => {
     const fetchHeroDetails = async () => {
-      let response = await axios.get(`http://localhost:8080/hero/${id}`);
+      let response = await axios.get(api);
       response.data.response === "success"
         ? setHero(response.data)
         : setError(response.data.error);
